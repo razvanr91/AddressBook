@@ -1,4 +1,5 @@
 ﻿using System;
+using AddressBook.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace AddressBook.Data
@@ -8,7 +9,8 @@ namespace AddressBook.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-
         }
+
+        public DbSet<Contact> Contacts { get; set; }
     }
 }
